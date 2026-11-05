@@ -47,8 +47,9 @@ const bookStore = {
 //selecting the element 
 const bookStoreTitle = document.getElementById('header');
 bookStoreTitle.textContent = bookStore.name;
+const bookList = document.querySelector('#book-list');
 
-bookstore.books.forEach(book => {
+bookStore.books.forEach(book => {
     const bookContainer = document.createElement('li');
     const bookTitle = document.createElement('h3');
     const bookAuthor = document.createElement('p');
@@ -62,5 +63,5 @@ bookstore.books.forEach(book => {
     bookContainer.appendChild(bookAuthor);
     bookContainer.appendChild(bookImage);
 
-    booklist.appendChild(bookContainer);
+    bookList.appendChild(bookContainer);
 });
